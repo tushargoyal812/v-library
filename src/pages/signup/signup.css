@@ -1,0 +1,33 @@
+:root{
+    --shadow: #cbd5e1;
+}
+
+.signup-wrapper{
+    width: 30rem;
+    box-shadow: 0 0 8px var(--shadow);
+    margin-top: 8rem;
+}
+
+.signup-input{
+    padding: 0.5rem 5rem;
+    border-radius: 3px;
+    border: 1px solid var(--gray-color);
+}
+
+.signup-input:focus{
+    outline: none;
+}
+
+.signup-page-btn{
+    padding: 0.5rem 7rem;
+    flex-shrink: 0;
+}
+
+
+.new-account{
+    color: var(--secondary-color);
+}
+
+.signup-section{
+    height: 70vh;
+}
