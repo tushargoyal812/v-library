@@ -1,0 +1,45 @@
+:root {
+    --quiz-color: #f97316;
+    --shadow: #cbd5e1;
+}
+
+.quiz-color {
+    color: var(--quiz-color);
+}
+
+.quiz-bg-color {
+    background-color: var(--quiz-color);
+}
+
+.quiz-home-main {
+    height: 50vh;
+}
+
+.quiz-text {
+    text-align: center;
+    line-height: 4;
+}
+
+.start-quiz-btn {
+    padding: 0.5rem 3rem;
+    font-size: 1.5rem;
+}
+
+.quiz-card-main {
+    padding: 0;
+}
+
+.quizzes-main {
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.quiz-card {
+    width: 20rem;
+    margin: 0;
+    box-shadow: 0 0 10px var(--shadow);
+}
+
+.quiz-img {
+    height: 10rem;
+}
