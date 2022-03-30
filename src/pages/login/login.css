@@ -1,0 +1,36 @@
+:root{
+    --shadow: #cbd5e1;
+}
+
+.login-wrapper{
+    width: 30rem;
+    box-shadow: 0 0 8px var(--shadow);
+    margin-top: 8rem;
+}
+
+.login-input{
+    padding: 0.5rem 5rem;
+    border-radius: 3px;
+    border: 1px solid var(--gray-color);
+}
+
+.login-input:focus{
+    outline: none;
+}
+
+.login-page-btn{
+    padding: 0.5rem 7rem;
+    flex-shrink: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+.new-account{
+    color: var(--secondary-color);
+}
+
+.login-section{
+    height: 70vh;
+}
