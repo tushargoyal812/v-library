@@ -15,6 +15,7 @@ export const Navbar=()=>{
                 <div class="ecom-white">showTube</div>
             </Link>
             <ul class="e-com-nav-items">
+                <Link to="/videolisting">videos</Link>
             </ul>
             <input type="text" class="search-input ecom-search" placeholder="search" />
             <div class="e-com-social">
