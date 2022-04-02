@@ -1,0 +1,19 @@
+.playlist-details{
+    display: flex;
+    border: 2px solid black;
+    border-radius: 0.5rem;
+}
+
+.playlist-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 40rem;
+    margin: auto;
+    gap: 1rem;
+}
+
+.playlist-image{
+    height: 12rem;
+}
+
