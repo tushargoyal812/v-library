@@ -1,0 +1,26 @@
+
+.playlist-name-parent{
+    padding: 0rem 3rem 0rem 3rem;
+    display: flex;
+    flex-direction: row;
+    height: 5rem;
+    align-items: center;
+    gap: 2rem;
+    border-radius: 0.5rem;
+    background-color: rgb(235, 232, 232);
+}
+
+.playlist-name{
+    margin-top: 0;
+    color: black;
+}
+
+.playlist-parent-main{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}

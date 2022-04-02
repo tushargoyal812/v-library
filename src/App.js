@@ -1,10 +1,13 @@
 import "./App.css";
 import { Home } from "./pages/home/home";
-import {Routes,Route} from 'react-router-dom'
+import {Routes,Route,useParams} from 'react-router-dom'
 import { Login } from "./pages/login/login";
 import { SignUp } from "./pages/signup/signup";
 import { VideoListing } from "./pages/video-listing/video-listing";
 import { WatchLater } from "./pages/watch-later/watch-later";
+import { PlayList } from "./pages/playlist/playlist";
+import { PlaylistDetail } from "./pages/playlist-detail/playlist-detail";
+import { VideoDetail } from "./pages/video-detail.js/video-detail";
 
 function App() {
   return (
@@ -15,6 +18,9 @@ function App() {
         <Route path="/signup" element={<SignUp/>} />
         <Route path="/videolisting" element={<VideoListing/>} />
         <Route path="/watchlater" element={<WatchLater/>} />
+        <Route path="/playlist" element={<PlayList/>} />
+        <Route path="/playlist/:_id" element={<PlaylistDetail/>} />
+        <Route path="/videodetail/:_id" element={<VideoDetail/>} />
       </Routes>
     </div>
   );
