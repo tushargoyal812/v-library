@@ -1,3 +1,66 @@
+import axios from 'axios'
+import React from 'react'
+import ReactPlayer from 'react-player'
+import {useParams} from 'react-router-dom'
+import { Navbar } from '../../components/navbar/navbar'
+import { useLike } from '../../context/like-context'
+import './video-detail.css'
+import { dislikedVideoHandler } from '../../util-functions/dislike'
+import { useVideo } from '../../context/video-context'
+import { watchLaterHandler } from '../../util-functions/watch-later'
 export const VideoDetail=()=>{
-    return <div>This is video detail</div>
+    const {videoDetail,like,setLike}=useLike()
+    const {setWatchLater}=useVideo()
+    const {_id}=useParams()
+
+    const likedVideosHandler= async (video)=>{
+      const token=localStorage.getItem("user")
+      try {
+        const response=await axios.post('/api/user/likes',{
+          video
+        },{
+          headers: {
+            authorization: token, // passing token as an authorization header
+          },
+        })
+        setLike(response.data.likes);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
+
+
+
+    return(
+        <div>
+          <Navbar/>
+         <div className='player-wrapper'>
+        <ReactPlayer
+          className='react-player'
+          url={`https://www.youtube.com/watch?${_id}`}
+          playing={true}
+        />
+         <h3 className='video-description'>{videoDetail.description}</h3>
+         <div className='video-detail-icon flex'>
+           <div onClick={()=>likedVideosHandler(videoDetail)} className='flex pointer'>
+         <span class="material-icons-outlined">thumb_up</span>
+         <span>1.4 M</span>
+           </div>
+           <div onClick={()=>dislikedVideoHandler(videoDetail,setLike)} className='flex pointer'>
+         <span class="material-icons-outlined">thumb_down</span>
+         <span>DISLIKE</span>
+           </div>
+           <div onClick={()=>watchLaterHandler(videoDetail,setWatchLater)} className='flex pointer'>
+         <span class="material-icons-outlined">watch_later</span>
+         <span>WATCH LATER</span>
+           </div>
+           <div className='flex'>
+           <span class="material-icons-outlined">queue_music</span>
+         <span>ADD TO PLAYLIST</span>
+           </div>
+         </div>
+      </div>
+         </div>
+         )
 }

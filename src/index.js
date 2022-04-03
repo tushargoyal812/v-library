@@ -7,12 +7,14 @@ import {BrowserRouter} from 'react-router-dom'
 import { AuthProvider } from "./context/auth-context";
 import { VideoProvider } from "./context/video-context";
 import { PlaylistProvider } from "./context/playlist-context";
+import { LikeProvider } from "./context/like-context";
 
 // Call make Server
 makeServer();
 
 ReactDOM.render(
   <React.StrictMode>
+    <LikeProvider>
     <PlaylistProvider>
     <VideoProvider>
     <AuthProvider>
@@ -22,6 +24,7 @@ ReactDOM.render(
     </AuthProvider>
     </VideoProvider>
     </PlaylistProvider>
+    </LikeProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

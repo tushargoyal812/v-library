@@ -1,0 +1,31 @@
+.player-wrapper {
+    position: relative;
+    padding-top: 56.25% /*Player ratio: 100 / (1280 / 720)*/
+  }
+  
+  .react-player iframe {
+    position: absolute;
+    top: 0;
+    left: 7rem;
+    height: 40%;
+    width: 60%;
+  }
+
+
+  .video-description{
+    position: absolute;
+    top: 43%;
+    left:7rem;
+  }
+
+  .video-detail-icon{
+    position: absolute;
+    top: 47%;
+    left: 35%;
+    gap: 1rem;
+  }
+
+
+  .pointer{
+    cursor: pointer;
+  }

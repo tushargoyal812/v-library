@@ -15,9 +15,9 @@ export const PlaylistDetail=()=>{
         setReset(playlist.find(list=>list._id===_id).videos);
     },[])
 
+
     const deleteVideoHandler= async (id)=>{
         const token=localStorage.getItem("user")
-        console.log(_id,id,"from use param");
         try {
             const response=await axios.delete(`/api/user/playlists/${_id}/${id}`,{
                 headers: {
