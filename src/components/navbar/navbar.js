@@ -9,21 +9,21 @@ export const Navbar=()=>{
     }
 
     return (
-        <header class="e-com-header">
-        <nav class="e-com-navbar shop-nav ecom-bg-blue">
+        <header className="e-com-header">
+        <nav className="e-com-navbar shop-nav ecom-bg-blue">
             <Link to="/">
-                <div class="ecom-white">showTube</div>
+                <div className="ecom-white">showTube</div>
             </Link>
-            <ul class="e-com-nav-items">
+            <ul className="e-com-nav-items">
                 <Link to="/videolisting">videos</Link>
             </ul>
-            <input type="text" class="search-input ecom-search" placeholder="search" />
-            <div class="e-com-social">
-                <div class="ecom-login-container">
+            <input type="text" className="search-input ecom-search" placeholder="search" />
+            <div className="e-com-social">
+                <div className="ecom-login-container">
                     {auth?<Link onClick={logoutHandler} to="/login">
-                        <button class="login-btn ecom-bg-white ecom-blue">Log out</button>
+                        <button className="login-btn ecom-bg-white ecom-blue">Log out</button>
                     </Link>:<Link to="/login">
-                        <button class="login-btn ecom-bg-white ecom-blue">Login</button>
+                        <button className="login-btn ecom-bg-white ecom-blue">Login</button>
                     </Link>}
                 </div>
             </div>
