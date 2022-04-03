@@ -20,10 +20,10 @@ export const Modal=()=>{
                         </div>
                     ))}
                 </div>
-                {playlistName?<div>
+                {playlistName&&<div>
                     <label htmlFor="">Name</label>
                     <input onChange={(e)=>setPlaylistInput(e.target.value)} type="text" placeholder='enter playlist name' />
-                </div>:""}
+                </div>}
                 <hr />
                 <div className="modal-footer">
                     {playlistName?<div onClick={()=>createPlaylistHandler(playlistInput,setPlaylist)} className='create-playlist'><span class="material-icons">add</span>Create</div>:<div onClick={()=>setPlaylistName(true)} className='create-playlist'><span className="material-icons">add</span>create play list</div>}

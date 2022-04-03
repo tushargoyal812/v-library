@@ -15,7 +15,7 @@ export const LikedVideos=()=>{
             <main style={{margin:"0rem"}} className="product-main p-1">
         <div className="playlist-container">
             {like.map(item=>(
-                <div className="playlist-details">
+                <div key={item._id} className="playlist-details">
                     <img className="playlist-image" src={item.image} />
                     <div>
                     <h2 className="playlist-name mx-1">{item.description} </h2>
