@@ -1,3 +1,11 @@
 .dislike-in-like{
     justify-content: center;
 }
+
+
+.liked-signout{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25rem;
+}

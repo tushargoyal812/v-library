@@ -1,5 +1,5 @@
 import axios from "axios";
-export const dislikedVideoHandler=async(video,setLike)=>{
+export const dislikedVideoHandler=async(video,setLike,setDislike)=>{
   const token=localStorage.getItem("user")
   console.log(video);
   try {
@@ -9,6 +9,7 @@ export const dislikedVideoHandler=async(video,setLike)=>{
       },
     })
     setLike(response.data.likes);
+    setDislike(true)
   } catch (error) {
     console.log(error);
   }

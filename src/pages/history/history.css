@@ -1,0 +1,18 @@
+.no-items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.delete-icon-history{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top:2.5rem;
+    background-color: white;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    align-items: center;
+}

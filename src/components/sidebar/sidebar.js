@@ -18,9 +18,9 @@ export const Sidebar=()=>{
             <Link to="/watchlater" className="price p-1">
                 <h2 className="">Watch later</h2>
             </Link>
-            <div className="price p-1">
+            <Link to="/history" className="price p-1">
                 <h2 className="">History</h2>
-            </div>
+            </Link>
             <div className="price p-1">
                 <h2 className="">Your videos</h2>
             </div>

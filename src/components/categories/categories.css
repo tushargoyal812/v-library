@@ -38,8 +38,20 @@
     width: 20rem;
     margin: 0;
     box-shadow: 0 0 10px var(--shadow);
+    cursor: pointer;
 }
 
 .quiz-img {
     height: 10rem;
+}
+
+
+#category-name{
+    display: flex;
+    justify-content: center;
+}
+
+
+#video-category{
+    width: 15rem;
 }

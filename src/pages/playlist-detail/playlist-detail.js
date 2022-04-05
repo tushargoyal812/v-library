@@ -5,8 +5,10 @@ import { Navbar } from "../../components/navbar/navbar";
 import { Sidebar } from "../../components/sidebar/sidebar";
 import { usePlaylist } from "../../context/playlist-context";
 import './playlist-detail.css'
+import { VideoCard } from "../../components/video-card/video-card";
+import { Modal } from "../../components/modal/modal";
 export const PlaylistDetail=()=>{
-    const {playlist}=usePlaylist()
+    const {playlist,modal}=usePlaylist()
     const {_id}=useParams()
     const [reset,setReset]=useState([])
 
@@ -36,19 +38,44 @@ export const PlaylistDetail=()=>{
         <>
         <Navbar/>
         <div className="product-main-sidebar">
-            <Sidebar/>
-            <main style={{margin:"0rem"}} className="product-main p-1">
-        <div className="playlist-container">
-            {reset&&reset.map(item=>(
-                <div className="playlist-details">
-                    <img className="playlist-image" src={item.image} />
-                    <h2 className="playlist-name mx-1">{item.title} </h2>
-                    <span onClick={()=>deleteVideoHandler(item._id)}><span class="material-icons cursor-pointer">delete</span></span>
-                </div>
-            ))}
-        </div>
+        <Sidebar/>
+        <main style={{margin:"0rem"}} className="product-main videolisting-main p-1">
+            <div>
+                <span id="hamburger" className="material-icons">
+                    menu
+                </span>
+            </div>
+            <div className="showing ">
+                Playlist Video
+            </div>
+                {modal&&<Modal/>}
+            <div id="all-playlist" className="all-products">
+                {reset&&reset.map(item=>
+                   <div>
+                        <VideoCard video={item} />
+                        <div className="delete-icon"><span onClick={()=>deleteVideoHandler(item._id)} className="material-icons cursor-pointer">delete</span></div>
+                    </div>
+                )}
+           </div>
         </main>
         </div>
         </>
+        // <>
+        // <Navbar/>
+        // <div className="product-main-sidebar">
+        //     <Sidebar/>
+        //     <main style={{margin:"0rem"}} className="product-main p-1">
+        // <div className="playlist-container">
+        //     {reset&&reset.map(item=>(
+        //         <div className="playlist-details">
+        //             <img className="playlist-image" src={item.image} />
+        //             <h2 className="playlist-name mx-1">{item.title} </h2>
+        //             <span onClick={()=>deleteVideoHandler(item._id)}><span class="material-icons cursor-pointer">delete</span></span>
+        //         </div>
+        //     ))}
+        // </div>
+        // </main>
+        // </div>
+        // </>
     )
 }

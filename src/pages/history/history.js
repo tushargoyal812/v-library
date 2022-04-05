@@ -1,16 +1,18 @@
 import { Navbar } from "../../components/navbar/navbar"
 import { Sidebar } from "../../components/sidebar/sidebar"
 import { useVideo } from "../../context/video-context"
-import { VideoCard } from "../../components/video-card/video-card"
+import { removeHistory } from "../../util-functions/remove-history"
+import {VideoCard} from "../../components/video-card/video-card"
+import { usePlaylist } from "../../context/playlist-context"
+import { Modal } from "../../components/modal/modal"
+import './history.css'
 import { getToken } from "../../util-functions/get-token"
 import { Link } from "react-router-dom"
-import { Modal } from "../../components/modal/modal"
-import { usePlaylist } from "../../context/playlist-context"
 
-export const WatchLater=()=>{
-    const {watchLater}=useVideo()
+export const History=()=>{
+    const {history,setHistory}=useVideo()
     const {modal}=usePlaylist()
-    return (
+    return(
         <>
         <Navbar/>
         <div className="product-main-sidebar">
@@ -23,21 +25,24 @@ export const WatchLater=()=>{
             </div>
             {getToken()&&
             <div className="showing">
-                Watch Later{" "}({watchLater.length})
+                History{" "}({history.length})
             </div>
             }
                 {modal&&<Modal/>}
             <div className="all-products">
-                {getToken()&&watchLater.length===0&&<h1>No Videos</h1>}
-                {getToken()?watchLater.map(item=><VideoCard video={item} />):
+                {getToken()&&history.length===0&&<h1>No History</h1>}
+                {getToken()?history.map(item=>
+                <div>
+                    <VideoCard video={item} />
+                    <div className="delete-icon-history"><span onClick={()=>removeHistory(item._id,setHistory)} className="material-icons cursor-pointer">delete</span></div>
+                </div>):
                 <div className="liked-signout">
                 <div>
-                <h2>Keep track of what you Added in Watchlater</h2>
-                <div className="my-2">Watch later content isn't viewable when you're signed out.</div>
+                <h2>Keep track of what you Watch</h2>
+                <div className="my-2">Watch History isn't viewable when you're signed out.</div>
                 <Link to="/login" class="btn basic">Sign In</Link>
                 </div>
-                </div>
-            }
+                </div>}
            </div>
         </main>
         </div>
@@ -52,18 +57,18 @@ export const WatchLater=()=>{
         //             menu
         //         </span>
         //     </div>
-        //     {/* <div class="showing p-2">
+        //     <div class="showing p-2">
         //         Showing All Products
-        //     </div> */}
+        //     </div>
         //     <div class="all-products">
-        //         {watchLater.map(video=>(
+        //         {history.map(video=>(
         //             <div className="card quiz-card">
         //             <div className="card-main-section quiz-card-main">
         //                 <img src={video.image} className="product-img quiz-img" alt="category-image" />
         //                 <main className="middle p-1">
         //                     <p className="para"></p>
         //                     <div className="flex space-between mt-1">
-        //                         {/* <a href="/rules/movie-rules.html"><button className="btn start-quiz-btn quiz-bg-color">Watch Later</button></a> */}
+        //                         <button onClick={()=>removeHistory(video._id,setHistory)} className="btn start-quiz-btn quiz-bg-color">remove</button>
         //                     </div>
         //                 </main>
         //             </div>
