@@ -1,8 +1,3 @@
-// import axios from 'axios'
-// import './video-listing.css'
-// // import { useEffect,useState } from 'react'
-// // import {Navbar} from '../../components/navbar/navbar'
-// // import { Sidebar } from '../../components/sidebar/sidebar'
 import { useVideo } from '../../context/video-context'
 import { usePlaylist } from '../../context/playlist-context'
 import { Link } from 'react-router-dom'
@@ -15,7 +10,6 @@ import { videos } from '../../util-functions/videos'
 import { videoHandler } from '../../util-functions/videoHandler'
 import { RemoveWatchLaterHandler } from '../../util-functions/remove-watchlater'
 import "./video-card.css"
-// import { VideoCard } from '../../components/video-card/video-card'
 export const VideoCard=({video})=>{
     const {videoItem,setVideoItem,watchLater,setWatchLater}=useVideo()
     const {setSentPlayList,modal,setModal}=usePlaylist()
