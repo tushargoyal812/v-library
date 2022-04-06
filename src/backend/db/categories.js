@@ -8,30 +8,37 @@ import { v4 as uuid } from "uuid";
 export const categories = [
   {
     _id: uuid(),
-    categoryName: "English",
+    categoryName: "Arijit",
     description:
       "Computer programming is the process of designing and building an executable computer program to accomplish a specific computing",
-      image:"https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/4469/674469-h"
+      image:"https://i.scdn.co/image/ab67616d0000b273ba071b7b2ffb03ccb472425d"
   },
   {
     _id: uuid(),
-    categoryName: "Hindi",
+    categoryName: "Diljit",
     description:
       "Front-end web development, also known as client-side development is the practice of producing HTML, CSS and JavaScript for a website or Web Application",
-      image:"https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/7676/647676-v"
+      image:"https://i.scdn.co/image/ab6761610000e5eb92103a69abd9fbf76d866374"
   },
   {
     _id: uuid(),
-    categoryName: "Tamil",
+    categoryName: "Yo Yo",
     description:
       "Backend Development is also known as server-side development. It is everything that the users don't see and contains behind-the-scenes activities that occur when performing any action on a website.",
-      image:"https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/old_images/MOVIE/6137/1770016137/1770016137-h"
+      image:"https://i.scdn.co/image/ab6761610000e5eb339fc4fb0bf1ddd5cd420d60"
   },
   {
     _id: uuid(),
-    categoryName: "Marathi",
+    categoryName: "Ayushman",
     description:
       "Backend Development is also known as server-side development. It is everything that the users don't see and contains behind-the-scenes activities that occur when performing any action on a website.",
-      image:"https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/1950/281950-h"
+      image:"https://i.scdn.co/image/ab67706c0000bebbb10d47275e56e6622bef283f"
+  },
+  {
+    _id: uuid(),
+    categoryName: "Shaan",
+    description:
+      "Backend Development is also known as server-side development. It is everything that the users don't see and contains behind-the-scenes activities that occur when performing any action on a website.",
+      image:"https://i.scdn.co/image/ab6761610000e5ebdeea5cdcb379d8ef0c31f8bc"
   },
 ];

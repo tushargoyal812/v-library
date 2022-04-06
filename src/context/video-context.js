@@ -7,7 +7,8 @@ const VideoContext=createContext()
 const VideoProvider=({children})=>{
     const [videoItem,setVideoItem]=useState([])
     const [watchLater,setWatchLater]=useState([])
-    return <VideoContext.Provider value={{videoItem,setVideoItem,watchLater,setWatchLater}}>{children}</VideoContext.Provider>
+    const [history,setHistory]=useState([])
+    return <VideoContext.Provider value={{videoItem,setVideoItem,watchLater,setWatchLater,history,setHistory}}>{children}</VideoContext.Provider>
 }
 
 const useVideo=()=>useContext(VideoContext)

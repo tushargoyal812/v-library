@@ -6,7 +6,9 @@ const AuthContext=createContext()
 
 const AuthProvider=({children})=>{
     const [auth,setAuth]=useState(localStorage.getItem("user"))
-    return(<AuthContext.Provider value={{auth,setAuth}}>{children}</AuthContext.Provider>)
+    const [category,setCategory]=useState([])
+    const [sentCategory,setSentCategory]=useState([])
+    return(<AuthContext.Provider value={{auth,setAuth,category,setCategory,sentCategory,setSentCategory}}>{children}</AuthContext.Provider>)
 }
 
 

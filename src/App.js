@@ -9,6 +9,8 @@ import { PlayList } from "./pages/playlist/playlist";
 import { PlaylistDetail } from "./pages/playlist-detail/playlist-detail";
 import { VideoDetail } from "./pages/video-detail.js/video-detail";
 import { LikedVideos } from "./pages/liked-videos/liked-videos";
+import {History} from './pages/history/history'
+import { FilteredCategory } from "./pages/filtered-category/filtered-category";
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
         <Route path="/playlist/:_id" element={<PlaylistDetail/>} />
         <Route path="/videodetail/:_id" element={<VideoDetail/>} />
         <Route path="/likedvideos" element={<LikedVideos/>} />
+        <Route path="/history" element={<History/>} />
+        <Route path="/filtered/:_id" element={<FilteredCategory/>} />
       </Routes>
     </div>
   );
