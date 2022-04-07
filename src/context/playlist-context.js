@@ -10,7 +10,8 @@ const PlaylistProvider=({children})=>{
     const [playlistInput,setPlaylistInput]=useState()
     const [modal,setModal]=useState(false)
     const [sentPlayList,setSentPlayList]=useState(null)
-    return (<PlaylistContext.Provider value={{playlist,setPlaylist,playlistName,setPlaylistName,playlistInput,setPlaylistInput,modal,setModal,sentPlayList,setSentPlayList}}>{children}</PlaylistContext.Provider>)
+    const [reset,setReset]=useState([])
+    return (<PlaylistContext.Provider value={{playlist,setPlaylist,playlistName,setPlaylistName,playlistInput,setPlaylistInput,modal,setModal,sentPlayList,setSentPlayList,reset,setReset}}>{children}</PlaylistContext.Provider>)
 }
 
 const usePlaylist=()=>useContext(PlaylistContext)

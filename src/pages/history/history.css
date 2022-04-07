@@ -16,3 +16,9 @@
     height: 3rem;
     align-items: center;
 }
+
+
+.clear-history{
+    display: flex;
+    justify-content: flex-end;
+}

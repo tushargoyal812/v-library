@@ -8,26 +8,42 @@ import { Modal } from "../../components/modal/modal"
 import './history.css'
 import { getToken } from "../../util-functions/get-token"
 import { Link } from "react-router-dom"
+import axios from "axios"
 
 export const History=()=>{
     const {history,setHistory}=useVideo()
     const {modal}=usePlaylist()
+
+    const clearHistoryHandler=async()=>{
+        const token=localStorage.getItem("user")
+        try {
+            const response=await axios.delete('/api/user/history/all',{
+                headers: {
+                  authorization: token, // passing token as an authorization header
+                },
+              })
+              setHistory(response.data.history);
+        } catch (error) {
+            console.log(error);
+        }
+    }
     return(
         <>
         <Navbar/>
         <div className="product-main-sidebar">
         <Sidebar/>
         <main style={{margin:"0rem"}} className="product-main videolisting-main p-1">
-            <div>
-                <span id="hamburger" className="material-icons">
-                    menu
-                </span>
-            </div>
             {getToken()&&
-            <div className="showing">
-                History{" "}({history.length})
+            <div>
+                <div className="showing">
+                    History{" "}({history.length})
+                </div>
             </div>
             }
+
+            <div className="clear-history">
+            <button onClick={()=>clearHistoryHandler()}>clear all history</button>
+            </div>
                 {modal&&<Modal/>}
             <div className="all-products">
                 {getToken()&&history.length===0&&<h1>No History</h1>}

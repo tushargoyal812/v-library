@@ -11,10 +11,11 @@ import { VideoDetail } from "./pages/video-detail.js/video-detail";
 import { LikedVideos } from "./pages/liked-videos/liked-videos";
 import {History} from './pages/history/history'
 import { FilteredCategory } from "./pages/filtered-category/filtered-category";
+import { FourZeroFour } from "./pages/404/404";
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/login" element={<Login/>} />
@@ -27,6 +28,7 @@ function App() {
         <Route path="/likedvideos" element={<LikedVideos/>} />
         <Route path="/history" element={<History/>} />
         <Route path="/filtered/:_id" element={<FilteredCategory/>} />
+        <Route path="*" element={<FourZeroFour/>} />
       </Routes>
     </div>
   );

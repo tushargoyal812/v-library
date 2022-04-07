@@ -30,3 +30,8 @@
 .login-section{
     height: 70vh;
 }
+
+.video-library-login{
+    flex-direction: column;
+    gap: 1rem;
+}

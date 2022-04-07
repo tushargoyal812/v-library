@@ -4,7 +4,8 @@ import { setPlaylistHandler } from "../../util-functions/setPlaylist"
 import { sentVideo } from "../../util-functions/sentVideo"
 
 export const Modal=()=>{
-    const {playlist,setPlaylist,playlistName,setPlaylistName,playlistInput,setPlaylistInput,setModal,sentPlayList}=usePlaylist()
+    const {playlist,setPlaylist,playlistName,setPlaylistName,playlistInput,setPlaylistInput,setModal,sentPlayList,reset,setReset}=usePlaylist()
+    // console.log(reset.some(playVideo=>playVideo._id===setPlaylist._id),"from modal");
     return(
         <div className="modal">
                 <div className="modal-header p-1">
@@ -12,10 +13,11 @@ export const Modal=()=>{
                 <div className='playlist-parent' onClick={()=>setModal(false)}><span className="material-icons">cancel</span></div>
                  </div>
                 <hr />
+                {console.log(reset,"reset and sentplaylist")}
                 <div className="modal-body">
                     {playlist.map(item=>(
                         <div key={item._id}>
-                            <input onChange={()=>setPlaylistHandler(item._id,sentPlayList,sentVideo)} type="checkbox" />
+                            <input  onChange={()=>setPlaylistHandler(item._id,sentPlayList,sentVideo)} type="checkbox" />
                             <span>{item.title}</span>
                         </div>
                     ))}
@@ -31,3 +33,6 @@ export const Modal=()=>{
                 </div>
     )
 }
+
+
+// checked={reset.some(playVideo=>playVideo._id===sentPlayList._id)}

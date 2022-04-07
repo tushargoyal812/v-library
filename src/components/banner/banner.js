@@ -1,3 +1,8 @@
+import './banner.css'
 export const Banner=()=>{
-    return <img src={"https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/11302a8a-d75f-41b1-bb32-bdca784f0ce9/d8att2s-cd6d25f0-44ba-46d6-b5be-3eac54091a57.jpg/v1/fill/w_1024,h_251,q_75,strp/marvel_cinematic_universe_banner_by_paulrom_d8att2s-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MjUxIiwicGF0aCI6IlwvZlwvMTEzMDJhOGEtZDc1Zi00MWIxLWJiMzItYmRjYTc4NGYwY2U5XC9kOGF0dDJzLWNkNmQyNWYwLTQ0YmEtNDZkNi1iNWJlLTNlYWM1NDA5MWE1Ny5qcGciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.qFIdhclWYlnkNiv6372pyGG9NJi3haBARjLPNR9l9CU"} alt="banner-image" />
+    return(
+        <dir className="banner-parent">
+            <img className="video-banner" src={"https://www.mydoclinic.com/assets/site/images/music_banner.jpg"} alt="banner-image" />
+        </dir>
+    )
 }

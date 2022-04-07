@@ -17,24 +17,34 @@ import { VideoCard } from '../../components/video-card/video-card'
 export const VideoListing=()=>{
     const {videoItem,setVideoItem,watchLater,setWatchLater}=useVideo()
     const {setSentPlayList,modal,setModal}=usePlaylist()
-    const {setVideoDetail}=useLike()
+    const {display,setDisplay}=useLike()
     const {history,setHistory}=useVideo()
 
     useEffect(()=>{
         videos(setVideoItem)
     },[])
 
+
+    const hamburgerHandler=()=>{
+        if(display==="block")
+        {
+            setDisplay("none")
+        }else{
+            setDisplay("block")
+        }
+    }
+
     return (
         <>
         <Navbar/>
-        <div className="product-main-sidebar">
-        <Sidebar/>
-        <main style={{margin:"0rem"}} className="product-main videolisting-main p-1">
-            <div>
+        <div onClick={()=>hamburgerHandler()}>
                 <span id="hamburger" className="material-icons">
                     menu
                 </span>
             </div>
+        <div className="product-main-sidebar">
+        <Sidebar/>
+        <main style={{margin:"0rem"}} className="product-main videolisting-main p-1">
             <div className="showing ">
                 All videos
             </div>

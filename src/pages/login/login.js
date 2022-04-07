@@ -21,6 +21,20 @@ const {auth,setAuth}=useAuth()
         }
     }
 
+    const testHandler=async()=>{
+        try {
+          const response=await axios.post('/api/auth/login',{
+              email:"adarshbalika@gmail.com",
+              password:"adarshBalika123"
+          })
+          localStorage.setItem("user",response.data.encodedToken);
+          setAuth(true)
+          navigate('/')
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
     return (
         <>
         <Navbar/>
@@ -44,8 +58,9 @@ const {auth,setAuth}=useAuth()
                 <div className="remember">Remember me</div>
                 <a className="ml-3" href="">Forgot Password?</a>
             </div>
-            <div className="mb-1 flex justify-content-center">
+            <div className="video-library-login mb-1 flex justify-content-center">
                 <button onClick={loginHandler} className="btn basic login-page-btn ecom-bg-blue">Login</button>
+                <button onClick={testHandler} className="btn basic login-page-btn ecom-bg-blue">Test Login</button>
             </div>
             <div><Link className="new-account" to="/signup">Create New Account </Link></div>
         </div>

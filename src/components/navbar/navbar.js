@@ -1,30 +1,35 @@
-import {Link} from 'react-router-dom'
+import {Link,NavLink} from 'react-router-dom'
 import { useAuth } from '../../context/auth-context'
+import { useLike } from '../../context/like-context'
+import './navbar.css'
 export const Navbar=()=>{
     const {auth,setAuth}=useAuth()
+    const {display,setDisplay}=useLike()
 
     const logoutHandler=()=>{
         localStorage.removeItem("user")
         setAuth(false)
     }
 
+    
+
     return (
         <header className="e-com-header">
         <nav className="e-com-navbar shop-nav ecom-bg-blue">
-            <Link to="/">
-                <div className="ecom-white">showTube</div>
-            </Link>
+            <NavLink to="/">
+                <div className="ecom-white">show<span className='tube'>Tube</span></div>
+            </NavLink>
             <ul className="e-com-nav-items">
-                <Link to="/videolisting">videos</Link>
+                <NavLink to="/videolisting">videos</NavLink>
             </ul>
             <input type="text" className="search-input ecom-search" placeholder="search" />
             <div className="e-com-social">
                 <div className="ecom-login-container">
-                    {auth?<Link onClick={logoutHandler} to="/login">
+                    {auth?<NavLink onClick={logoutHandler} to="/login">
                         <button className="login-btn ecom-bg-white ecom-blue">Log out</button>
-                    </Link>:<Link to="/login">
+                    </NavLink>:<NavLink to="/login">
                         <button className="login-btn ecom-bg-white ecom-blue">Login</button>
-                    </Link>}
+                    </NavLink>}
                 </div>
             </div>
         </nav>

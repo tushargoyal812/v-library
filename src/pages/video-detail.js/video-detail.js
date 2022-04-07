@@ -36,16 +36,22 @@ export const VideoDetail=()=>{
       }
     }
     return(
-        <div>
+        <>
           <Navbar/>
-         <div className='player-wrapper'>
-        <ReactPlayer
+          <div className='player-wrapper'>
+          <ReactPlayer
           className='react-player'
-          url={`https://www.youtube.com/watch?${_id}`}
+          url={`https://www.youtube.com/watch?v=${_id}`}
+          width="900px"
           playing={true}
-        />
-        {modal&&<Modal/>}
-         <h3 className='video-description'>{videoDetail.description}</h3>
+          />
+          </div>
+          <div>
+          <div>
+          <p className='video-description'>{videoDetail.description}</p>
+          </div>
+          {modal&&<Modal/>}
+        <div className='video-icon-container'>
          <div className='video-detail-icon flex'>
            {like.some(item=>item._id===_id)?<div onClick={()=>dislikedVideoHandler(videoDetail,setLike)} className='flex pointer'>
          <span class="material-icons">thumb_up</span>
@@ -72,7 +78,9 @@ export const VideoDetail=()=>{
          <span>ADD TO PLAYLIST</span>
            </div>
          </div>
-      </div>
          </div>
-         )
+          </div>
+      </>
+      )
 }
+

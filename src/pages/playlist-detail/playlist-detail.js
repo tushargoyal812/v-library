@@ -8,9 +8,8 @@ import './playlist-detail.css'
 import { VideoCard } from "../../components/video-card/video-card";
 import { Modal } from "../../components/modal/modal";
 export const PlaylistDetail=()=>{
-    const {playlist,modal}=usePlaylist()
+    const {playlist,modal,reset,setReset}=usePlaylist()
     const {_id}=useParams()
-    const [reset,setReset]=useState([])
 
 
     useEffect(()=>{   
@@ -31,20 +30,12 @@ export const PlaylistDetail=()=>{
             console.log(error);
         }
     }
-
-    
-
     return (
         <>
         <Navbar/>
         <div className="product-main-sidebar">
         <Sidebar/>
         <main style={{margin:"0rem"}} className="product-main videolisting-main p-1">
-            <div>
-                <span id="hamburger" className="material-icons">
-                    menu
-                </span>
-            </div>
             <div className="showing ">
                 Playlist Video
             </div>

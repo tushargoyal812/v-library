@@ -7,7 +7,8 @@ const LikeContext=createContext()
 const LikeProvider=({children})=>{
     const [videoDetail,setVideoDetail]=useState({})
     const [like,setLike]=useState([])
-    return <LikeContext.Provider value={{videoDetail,setVideoDetail,like,setLike}}>{children}</LikeContext.Provider>
+    const [display,setDisplay]=useState("")
+    return <LikeContext.Provider value={{videoDetail,setVideoDetail,like,setLike,display,setDisplay}}>{children}</LikeContext.Provider>
 }
 
 

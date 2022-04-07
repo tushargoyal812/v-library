@@ -5,7 +5,7 @@ export const Home=()=>{
     return (
         <>
         <Navbar/>
-        {/* <Banner/> */}
+        <Banner/>
         <Categories/>
         </>
     )

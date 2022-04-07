@@ -16,11 +16,6 @@ export const WatchLater=()=>{
         <div className="product-main-sidebar">
         <Sidebar/>
         <main style={{margin:"0rem"}} className="product-main videolisting-main p-1">
-            <div>
-                <span id="hamburger" className="material-icons">
-                    menu
-                </span>
-            </div>
             {getToken()&&
             <div className="showing">
                 Watch Later{" "}({watchLater.length})

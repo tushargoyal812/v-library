@@ -1,5 +1,6 @@
 .product-main{
     margin-top: 0rem;
+    text-align: center;
 }
 
 .modal-header{
@@ -40,5 +41,9 @@
 }
 
 #all-videos{
-    gap:3rem;
+    gap:2rem;
 }
+
+
+
+/* other CSS */

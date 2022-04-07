@@ -5,7 +5,7 @@
 
 export const videos = [
   {
-    _id: "v=bzSTpdcs-EI",
+    _id: "bzSTpdcs-EI",
     title: "Channa Mereya",
     description:"Channa Mereya - Lyric Video | Ae Dil Hai Mushkil | Karan Johar | Ranbir | Anushka | Pritam | Arijit",
     creator: "Arijit",
@@ -13,7 +13,7 @@ export const videos = [
 
   },
   {
-    _id: "v=hoNb6HuNmU0",
+    _id: "hoNb6HuNmU0",
     title: "Khairiyat",
     creator: "Arijit",
     description:
@@ -21,14 +21,14 @@ export const videos = [
       image:"https://i.ytimg.com/vi/hoNb6HuNmU0/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB5ZOw_UiNaVX2gwPqExaZy1CKQBA"
   },
   {
-    _id: "v=MsTW5cyWKj4",
+    _id: "MsTW5cyWKj4",
     title: "5 Tara",
     creator: "Diljit",
     description:
       "5 Taara (Full Song) - Diljit Dosanjh | Latest Punjabi Songs 2015 | Speed Records",
-      image:"https://i.ytimg.com/vi/MsTW5cyWKj4/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBM-FvJprkcKHGrWmZt9jjfNvUTaw"
+      image:"https://i.ytimg.com/vi/MsTW5cyWKj4/maxresdefault.jpg"
   },{
-    _id: "v=dCmp56tSSmA",
+    _id: "dCmp56tSSmA",
     title: "Born to Shine",
     creator: "Diljit",
     description:
@@ -36,7 +36,7 @@ export const videos = [
       image:"https://i.ytimg.com/vi/dCmp56tSSmA/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDDbDC_1rWT8AyWskpgKIiPSsB11A"
   },
   {
-    _id: "v=Hw3NH_-_ja8",
+    _id: "Hw3NH_-_ja8",
     title: "Jingle Bell",
     creator: "Yo Yo",
     description:
@@ -44,7 +44,7 @@ export const videos = [
       image:"https://i.ytimg.com/vi/Hw3NH_-_ja8/maxresdefault.jpg"
   },
   {
-    _id: "v=TvngY4unjn4",
+    _id: "TvngY4unjn4",
     title: "LOVE DOSE",
     creator: "Yo Yo",
     description:
@@ -52,7 +52,7 @@ export const videos = [
       image:"https://i.ytimg.com/vi/TvngY4unjn4/maxresdefault.jpg"
   },
   {
-    _id: "v=5LBB6OV3Ano",
+    _id: "5LBB6OV3Ano",
     title: "Mere Liye Tum",
     creator: "Ayushman",
     description:
@@ -60,7 +60,7 @@ export const videos = [
       image:"https://i.ytimg.com/vi/5LBB6OV3Ano/maxresdefault.jpg"
   },
   {
-    _id: "v=2kgEc6oH9J0",
+    _id: "2kgEc6oH9J0",
     title: "Pani Da Rang",
     creator: "Ayushman",
     description:
@@ -68,7 +68,7 @@ export const videos = [
       image:"https://i.ytimg.com/vi/2kgEc6oH9J0/maxresdefault.jpg"
   },
   {
-    _id: "v=Mo5tQDcs__g",
+    _id: "Mo5tQDcs__g",
     title: "Aao Milo Chalen",
     creator: "Shaan",
     description:
@@ -76,7 +76,7 @@ export const videos = [
       image:"https://i.ytimg.com/vi/Mo5tQDcs__g/maxresdefault.jpg"
   },
   {
-    _id: "v=9Vy9ObEOVvg",
+    _id: "9Vy9ObEOVvg",
     title: "Aaj Unse Milna",
     creator: "Shaan",
     description:
@@ -84,7 +84,7 @@ export const videos = [
       image:"https://i.ytimg.com/vi/9Vy9ObEOVvg/maxresdefault.jpg"
   },
   {
-    _id: "v=dCmp56tSSmA",
+    _id: "dCmp56tSSmA",
     title: "Born to Shine",
     creator: "Diljit",
     description:
@@ -92,7 +92,7 @@ export const videos = [
       image:"https://i.ytimg.com/vi/dCmp56tSSmA/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDDbDC_1rWT8AyWskpgKIiPSsB11A"
   },
   {
-    _id: "v=dCmp56tSSmA",
+    _id: "dCmp56tSSmA",
     title: "Born to Shine",
     creator: "Diljit",
     description:
@@ -100,7 +100,7 @@ export const videos = [
       image:"https://i.ytimg.com/vi/dCmp56tSSmA/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDDbDC_1rWT8AyWskpgKIiPSsB11A"
   },
   {
-    _id: "v=dCmp56tSSmA",
+    _id: "dCmp56tSSmA",
     title: "Born to Shine",
     creator: "Diljit",
     description:
@@ -108,7 +108,7 @@ export const videos = [
       image:"https://i.ytimg.com/vi/dCmp56tSSmA/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDDbDC_1rWT8AyWskpgKIiPSsB11A"
   },
   {
-    _id: "v=dCmp56tSSmA",
+    _id: "dCmp56tSSmA",
     title: "Born to Shine",
     creator: "Diljit",
     description:

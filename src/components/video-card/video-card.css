@@ -4,5 +4,10 @@
 
 
 #watch-later-btn{
+    display: flex;
     font-size: 1.2rem;
+    background-color: #1DB954;
+    color:black;
+    padding: 0.5rem 2rem 0.5rem 2rem;
 }
+
