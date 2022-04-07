@@ -22,7 +22,6 @@ export const Navbar=()=>{
             <ul className="e-com-nav-items">
                 <NavLink to="/videolisting">videos</NavLink>
             </ul>
-            <input type="text" className="search-input ecom-search" placeholder="search" />
             <div className="e-com-social">
                 <div className="ecom-login-container">
                     {auth?<NavLink onClick={logoutHandler} to="/login">

@@ -73,7 +73,7 @@ export const VideoDetail=()=>{
          <span class="material-icons-outlined">watch_later</span>
          <span>WATCH LATER</span>
            </div>
-           <div onClick={()=>modalHandler(videoDetail,setModal,setSentPlayList)} className='flex'>
+           <div onClick={()=>modalHandler(videoDetail,setModal,setSentPlayList)} className='flex pointer'>
            <span class="material-icons-outlined">queue_music</span>
          <span>ADD TO PLAYLIST</span>
            </div>
