@@ -1,24 +1,18 @@
-import axios from 'axios'
 import './video-listing.css'
-import { useEffect,useState } from 'react'
+import { useEffect } from 'react'
 import {Navbar} from '../../components/navbar/navbar'
 import { Sidebar } from '../../components/sidebar/sidebar'
 import { useVideo } from '../../context/video-context'
 import { usePlaylist } from '../../context/playlist-context'
-import { Link } from 'react-router-dom'
 import { useLike } from '../../context/like-context'
-import { watchLaterHandler } from '../../util-functions/watch-later'
 import { Modal } from '../../components/modal/modal'
-import { modalHandler } from '../../util-functions/modal-handler'
-import { historyHandler } from '../../util-functions/history-handler'
 import { videos } from '../../util-functions/videos'
 import { VideoCard } from '../../components/video-card/video-card'
 
 export const VideoListing=()=>{
-    const {videoItem,setVideoItem,watchLater,setWatchLater}=useVideo()
-    const {setSentPlayList,modal,setModal}=usePlaylist()
+    const {videoItem,setVideoItem}=useVideo()
+    const {modal}=usePlaylist()
     const {display,setDisplay}=useLike()
-    const {history,setHistory}=useVideo()
 
     useEffect(()=>{
         videos(setVideoItem)

@@ -6,7 +6,7 @@ export const sentVideo= async (video,id)=>{
             video
         },{
             headers: {
-              authorization: token, // passing token as an authorization header
+              authorization: token,
             },
           })
     } catch (error) {

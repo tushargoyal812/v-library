@@ -1,10 +1,8 @@
-import {Link,NavLink} from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 import { useAuth } from '../../context/auth-context'
-import { useLike } from '../../context/like-context'
 import './navbar.css'
 export const Navbar=()=>{
     const {auth,setAuth}=useAuth()
-    const {display,setDisplay}=useLike()
 
     const logoutHandler=()=>{
         localStorage.removeItem("user")

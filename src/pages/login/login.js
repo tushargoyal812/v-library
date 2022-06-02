@@ -8,7 +8,7 @@ export const Login=()=>{
 const navigate=useNavigate()
 const [logData,setLogData]=useState({email:"",password:""})
 
-const {auth,setAuth}=useAuth()
+const {setAuth}=useAuth()
 
     const loginHandler= async ()=>{
         try {

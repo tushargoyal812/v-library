@@ -1,8 +1,8 @@
 import './sidebar.css'
-import { Link,NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { useLike } from '../../context/like-context'
 export const Sidebar=()=>{
-    const {display,setDisplay}=useLike()
+    const {display}=useLike()
     return(
         <aside style={{display:display}} className="product-sidebar p-2">
             <div className='sidebar-links-parent'>

@@ -7,7 +7,7 @@ export const historyHandler= async (video,setHistory)=>{
             video
         }, {
             headers: {
-              authorization: token, // passing token as an authorization header
+              authorization: token,
             },
           })
           setHistory(response.data.history);

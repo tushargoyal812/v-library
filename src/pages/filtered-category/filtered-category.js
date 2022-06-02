@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useAuth } from "../../context/auth-context"
 import { useVideo } from "../../context/video-context";
 import { videos } from "../../util-functions/videos";
@@ -9,10 +9,9 @@ import { VideoCard } from "../../components/video-card/video-card";
 import { Sidebar } from "../../components/sidebar/sidebar";
 
 export const FilteredCategory=()=>{
-    const {category,sentCategory}=useAuth()
+    const {sentCategory}=useAuth()
     const {videoItem,setVideoItem}=useVideo()
     const {modal}=usePlaylist()
-    const [filteredCategory,setFilteredCategory]=useState([])
     useEffect(()=>{
         videos(setVideoItem)
     },[])
@@ -39,10 +38,5 @@ export const FilteredCategory=()=>{
         </main>
         </div>
         </>
-        // <div>
-        //     {filteredData.map(item=>(
-        //         <img src={item.image} alt="" srcset="" />
-        //     ))}
-        // </div>
         ) 
 }

@@ -19,7 +19,7 @@ export const History=()=>{
         try {
             const response=await axios.delete('/api/user/history/all',{
                 headers: {
-                  authorization: token, // passing token as an authorization header
+                  authorization: token,
                 },
               })
               setHistory(response.data.history);
@@ -63,36 +63,5 @@ export const History=()=>{
         </main>
         </div>
         </>
-        // <>
-        // <Navbar/>
-        // <div class="product-main-sidebar ">
-        // <Sidebar/>
-        // <main class="product-main p-1">
-        //     <div>
-        //         <span id="hamburger" class="material-icons">
-        //             menu
-        //         </span>
-        //     </div>
-        //     <div class="showing p-2">
-        //         Showing All Products
-        //     </div>
-        //     <div class="all-products">
-        //         {history.map(video=>(
-        //             <div className="card quiz-card">
-        //             <div className="card-main-section quiz-card-main">
-        //                 <img src={video.image} className="product-img quiz-img" alt="category-image" />
-        //                 <main className="middle p-1">
-        //                     <p className="para"></p>
-        //                     <div className="flex space-between mt-1">
-        //                         <button onClick={()=>removeHistory(video._id,setHistory)} className="btn start-quiz-btn quiz-bg-color">remove</button>
-        //                     </div>
-        //                 </main>
-        //             </div>
-        //         </div>
-        //         ))}
-        //    </div>
-        // </main>
-        // </div>
-        // </>
     )
 }

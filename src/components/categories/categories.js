@@ -1,14 +1,12 @@
 import axios from 'axios'
-import { useState,useEffect } from 'react'
+import { useEffect } from 'react'
 import {Link} from 'react-router-dom'
 import { useAuth } from '../../context/auth-context'
 import './categories.css'
 export const Categories=()=>{
 
-    const {category,setCategory,sentCategory,setSentCategory}=useAuth()
+    const {category,setCategory,setSentCategory}=useAuth()
 
-    // axios.get('/api/categories')
-    // .then(res=>setCategory(res.data.categories))
 
     useEffect(()=>{
         getCategory()
@@ -30,9 +28,6 @@ export const Categories=()=>{
                     <img src={item.image} className="product-img quiz-img" alt="category-image" />
                     <main id="category-name" className="middle p-1">
                         <p className="para">{item.categoryName}</p>
-                        {/* <div className="flex space-between mt-1">
-                            <a href="/rules/movie-rules.html"><button className="btn start-quiz-btn quiz-bg-color">Watch Now</button></a>
-                        </div> */}
                     </main>
                 </div>
             </Link>

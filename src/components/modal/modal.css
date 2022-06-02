@@ -1,0 +1,18 @@
+
+.playlist-input{
+    border: none;
+    text-align: center;
+    border-bottom: 2px solid black;
+}
+
+.playlist-input:focus{
+    outline: none;
+}
+
+.playlist-input-parent{
+    margin-bottom: 1rem;
+}
+
+.modal-footer-parent{
+    margin: 1rem 0rem;
+}

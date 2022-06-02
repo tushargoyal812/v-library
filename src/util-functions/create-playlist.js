@@ -6,7 +6,7 @@ export const createPlaylistHandler= async (playlistName,setPlaylist)=>{
             playlist: {title: playlistName, description:"bar bar bar" }
          },{
             headers: {
-              authorization: token, // passing token as an authorization header
+              authorization: token,
             },
           })
           setPlaylist(response.data.playlists);

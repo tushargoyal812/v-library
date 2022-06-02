@@ -4,7 +4,7 @@ import './playlist.css'
 import { Navbar } from "../../components/navbar/navbar"
 import { Sidebar } from "../../components/sidebar/sidebar"
 import { usePlaylist } from "../../context/playlist-context"
-import { Link,useParams } from "react-router-dom"
+import { Link } from "react-router-dom"
 import { getToken } from "../../util-functions/get-token"
 
 export const PlayList=()=>{
@@ -21,7 +21,7 @@ export const PlayList=()=>{
         try {
             const response=await axios.get(`/api/user/playlists`,{
                 headers: {
-                  authorization: token, // passing token as an authorization header
+                  authorization: token,
                 },
               })
               setPlaylist(response.data.playlists);
@@ -36,7 +36,7 @@ export const PlayList=()=>{
         try {
             const response=await axios.delete(`/api/user/playlists/${id}`,{
                 headers: {
-                  authorization: token, // passing token as an authorization header
+                  authorization: token,
                 },
               })
               setPlaylist(response.data.playlists);

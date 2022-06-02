@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React, { useState } from 'react'
 import ReactPlayer from 'react-player'
-import {useParams} from 'react-router-dom'
+import {useParams,useNavigate} from 'react-router-dom'
 import { Navbar } from '../../components/navbar/navbar'
 import { useLike } from '../../context/like-context'
 import './video-detail.css'
@@ -11,13 +11,15 @@ import { watchLaterHandler } from '../../util-functions/watch-later'
 import { Modal } from '../../components/modal/modal'
 import { usePlaylist } from '../../context/playlist-context'
 import { modalHandler } from '../../util-functions/modal-handler'
-// import {video}
+import { useAuth } from '../../context/auth-context'
 export const VideoDetail=()=>{
     const {videoDetail,like,setLike}=useLike()
     const {setWatchLater}=useVideo()
     const {_id}=useParams()
     const [dislike,setDislike]=useState(false)
     const {modal,setSentPlayList,setModal}=usePlaylist()
+    const {auth}=useAuth()
+    const navigate=useNavigate()
 
     const likedVideosHandler= async (video,setDislike)=>{
       const token=localStorage.getItem("user")
@@ -26,7 +28,7 @@ export const VideoDetail=()=>{
           video
         },{
           headers: {
-            authorization: token, // passing token as an authorization header
+            authorization: token,
           },
         })
         setLike(response.data.likes);
@@ -69,11 +71,11 @@ export const VideoDetail=()=>{
          <span>DISLIKE</span>
            </div>
            }
-           <div onClick={()=>watchLaterHandler(videoDetail,setWatchLater)} className='flex pointer'>
+           <div onClick={()=>watchLaterHandler(videoDetail,setWatchLater,auth,navigate)} className='flex pointer'>
          <span class="material-icons-outlined">watch_later</span>
          <span>WATCH LATER</span>
            </div>
-           <div onClick={()=>modalHandler(videoDetail,setModal,setSentPlayList)} className='flex pointer'>
+           <div onClick={()=>modalHandler(videoDetail,setModal,setSentPlayList,auth,navigate)} className='flex pointer'>
            <span class="material-icons-outlined">queue_music</span>
          <span>ADD TO PLAYLIST</span>
            </div>

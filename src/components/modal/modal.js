@@ -1,3 +1,4 @@
+import './modal.css'
 import { usePlaylist } from "../../context/playlist-context"
 import { createPlaylistHandler } from "../../util-functions/create-playlist"
 import { setPlaylistHandler } from "../../util-functions/setPlaylist"
@@ -5,7 +6,6 @@ import { sentVideo } from "../../util-functions/sentVideo"
 
 export const Modal=()=>{
     const {playlist,setPlaylist,playlistName,setPlaylistName,playlistInput,setPlaylistInput,setModal,sentPlayList,reset,setReset}=usePlaylist()
-    // console.log(reset.some(playVideo=>playVideo._id===setPlaylist._id),"from modal");
     return(
         <div className="modal">
                 <div className="modal-header p-1">
@@ -22,17 +22,15 @@ export const Modal=()=>{
                         </div>
                     ))}
                 </div>
-                {playlistName&&<div>
+                {playlistName&&<div className='playlist-input-parent'>
                     <label htmlFor="">Name</label>
-                    <input onChange={(e)=>setPlaylistInput(e.target.value)} type="text" placeholder='enter playlist name' />
+                    <input className="playlist-input" autoFocus='true' onChange={(e)=>setPlaylistInput(e.target.value)} type="text" placeholder='enter playlist name' />
                 </div>}
                 <hr />
-                <div className="modal-footer">
+                <div className="modal-footer-parent">
                     {playlistName?<div onClick={()=>createPlaylistHandler(playlistInput,setPlaylist)} className='create-playlist'><span class="material-icons">add</span>Create</div>:<div onClick={()=>setPlaylistName(true)} className='create-playlist'><span className="material-icons">add</span>create play list</div>}
                 </div>
                 </div>
     )
 }
 
-
-// checked={reset.some(playVideo=>playVideo._id===sentPlayList._id)}

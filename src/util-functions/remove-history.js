@@ -5,7 +5,7 @@ export const removeHistory= async (id,setHistory)=>{
     try {
         const response=await axios.delete(`/api/user/history/${id}`,{
             headers: {
-              authorization: token, // passing token as an authorization header
+              authorization: token,
             },
           })
           setHistory(response.data.history);

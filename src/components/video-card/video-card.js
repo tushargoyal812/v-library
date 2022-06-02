@@ -3,19 +3,17 @@ import { usePlaylist } from '../../context/playlist-context'
 import { Link,useNavigate } from 'react-router-dom'
 import { useLike } from '../../context/like-context'
 import { watchLaterHandler } from '../../util-functions/watch-later'
-import { Modal } from '../../components/modal/modal'
 import { modalHandler } from '../../util-functions/modal-handler'
 import { historyHandler } from '../../util-functions/history-handler'
-import { videos } from '../../util-functions/videos'
 import { videoHandler } from '../../util-functions/videoHandler'
 import { RemoveWatchLaterHandler } from '../../util-functions/remove-watchlater'
 import "./video-card.css"
 import { useAuth } from '../../context/auth-context'
 export const VideoCard=({video})=>{
-    const {videoItem,setVideoItem,watchLater,setWatchLater}=useVideo()
-    const {setSentPlayList,modal,setModal}=usePlaylist()
+    const {watchLater,setWatchLater}=useVideo()
+    const {setSentPlayList,setModal}=usePlaylist()
     const {setVideoDetail}=useLike()
-    const {history,setHistory}=useVideo()
+    const {setHistory}=useVideo()
     const {auth}=useAuth()
     const navigate=useNavigate()
     return(
